@@ -185,6 +185,9 @@ write_header = ["ExperimentNumber","NumberOfNodes","TrainingPeriods","PreShockRo
 for l in range(1,3):
     for i in range(1,7):
         write_header = write_header + ["PlayerConnectedToLayer-"+str(l)+"_Node"+str(i)];
+# demographic info
+write_header = write_header + ["gender","year","major"];
+    
             
 directory = "/Users/keithburghardt/Dropbox/MultiplexExperiment/Experiment Data Files/";
 write_file = "ParsedVariableExperimentData.csv";
@@ -224,6 +227,10 @@ for session in SessionList:
     #header=csv_reader.next();
 
     globals_read = False;
+    demog=[];
+    #Period = 0;
+    #end_of_exp = False;
+    #final_subj = 0;
     for row in csv_reader:
         row = [str(val) for val in row];
         if row[2] == "globals" and not row[4].isnumeric() and not globals_read:
@@ -273,13 +280,15 @@ for session in SessionList:
             ActivePlayer=round(float(row[active_playerPos]))
         if row[2] == "subjects" and not row[4].isnumeric():
             subject_variable_list = row;
-            
+        if row[2] == "session" and row[4].isnumeric():
+            # demographic info
+            demog.append(row[10:13]);
         if row[2] == "subjects" and row[4].isnumeric():
 
             #period
             PeriodPos = subject_variable_list.index("Period")
             Period = round(float(row[PeriodPos]));
-
+            
             #player name
             player_namePos = subject_variable_list.index("player_name")
             player_name = round(float(row[player_namePos]));
@@ -308,6 +317,17 @@ for session in SessionList:
             
             if Period > NumNodes*TrainingPeriods:
                 SubjectVars.append(flatten([[""]*(len(GlobalVars)+1),[Period-NumNodes*TrainingPeriods],[ActivePlayer],[player_name],[Shocked],[Profit],flatten(WhoConnected)]));
+    # organize subjectvars
+    SubjectVars = sorted(SubjectVars[:]);
+    # add demographic info
+    if len(demog) > 0:
+        for pos in range(len(SubjectVars)):
+            SubjID = SubjectVars[pos][len(GlobalVars)+3]
+            for i in range(3):
+                SubjectVars[pos].append(demog[SubjID-1][i]);
+
+    # add demographic info
+    
     SubjectVars[0][0] = ExpNumber;
     for i in range(len(GlobalVars)):
         SubjectVars[0][i+1] = GlobalVars[i];
@@ -315,3 +335,32 @@ for session in SessionList:
         write_csv_file.writerow(line);
         w.flush();
         os.fsync(w);
+    
+            
+                
+            
+            
+            
+        
+            
+            
+            
+            
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
