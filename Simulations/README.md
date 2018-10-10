@@ -28,6 +28,8 @@ What agents do:
   
 - Variables: 
 
+Agents want to maximize the utility function: u_i =e v_i +  \sum_{\ell\in\{1,2\}}t_{i\ell} - c_i \left(\sum_{\ell\in\{1,2\}} t_{i\ell} \right)^2 + d \sum_{\ell\in\{1,2\}} z_{i\ell},
+
 e, b, c_i, and d are parameters (b=1 for now)
 
 v_i are the number of edges that are the same across layers ("spillover" edges) for node i. These edges are seen more often than chance in real systems. 
@@ -36,5 +38,5 @@ t_{i,l} are the number of edges from node i in each layer (edges are undirected)
 
 z_{i,l} are the number of triangles made by node i. This is used to create clustering seen in cooperative (as well as many other) networks 
 
-Agents can either maximize u_i at each timestep or rewire, which allows agents to "explore". This is intuitively similar to the epsilon-greedy algorithm in Multi-Armed Bandit theory, or alike to temperature in simulated annealing. In either case, this randomness allows agents to explore the system more than they otherwise would, which in a rough utility landscape, allows them to find unexpected ways their utility can be maximized.
+Agents can either maximize u_i at each timestep (i.e., maximize myopically) or randomly offer a tie or drop an edge, which allows agents to "explore". This is intuitively similar to the epsilon-greedy algorithm in Multi-Armed Bandit theory, or alike to temperature in simulated annealing. In either case, this randomness allows agents to explore the system more than they otherwise would, which in a rough utility landscape, allows them to find unexpected ways their utility can be maximized.
 
