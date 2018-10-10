@@ -4,8 +4,8 @@ This is code to create and analyze data for the manuscript:
 "Exploration and Exploitation in Dynamic Cooperative Multiplex Networks"
 By Daniel J. Simmons, Keith Burghardt, Luba Levin-Banchik, Michelle C. Phillips, Zeev Maoz
 
-
-Code by Keith Burghardt (Copyright 2018)
+Analysis code by Keith Burghardt (Copyright 2018)
+z-Tree code by Daniel J. Simmons, Keith Burghardt, and Michelle C. Phillips (Copyright 2018)
 
 The repository is split into 3 parts: experiment code, simulations and data analysis
  - Experiment code is the z-Tree code we run, which is based on code from the paper: Martijn J Burger and Vincent Buskens. "Social context and network formation: An experimental study" Social Networks 31(1):63–75 (2009)
