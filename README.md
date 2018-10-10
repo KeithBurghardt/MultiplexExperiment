@@ -1,5 +1,5 @@
 # MultiplexExperiment
-- This is code to create and analyze data for the manuscript: 
+This repository contains data and the code used to create and analyze data for the manuscript: 
 
 "Exploration and Exploitation in Dynamic Cooperative Multiplex Networks"
 
