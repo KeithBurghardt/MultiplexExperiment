@@ -5,6 +5,7 @@ This is code to create and analyze data for the manuscript:
 By Daniel J. Simmons, Keith Burghardt, Luba Levin-Banchik, Michelle C. Phillips, Zeev Maoz
 
 Analysis code by Keith Burghardt (Copyright 2018)
+
 z-Tree code by Daniel J. Simmons, Keith Burghardt, and Michelle C. Phillips (Copyright 2018)
 
 The repository is split into 3 parts: experiment code, simulations and data analysis
