@@ -3,7 +3,7 @@
 
 "Exploration and Exploitation in Dynamic Cooperative Multiplex Networks"
 
-By Daniel J. Simmons, Keith Burghardt, Luba Levin-Banchik, Michelle C. Phillips, Zeev Maoz
+By Daniel J. Simmons, Keith Burghardt, Luba Levin-Banchik, Michelle C. Phillips, and Zeev Maoz
 
 - Analysis code by Keith Burghardt (Copyright 2018)
 
