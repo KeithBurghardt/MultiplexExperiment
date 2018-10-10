@@ -1,15 +1,11 @@
 # MultiplexExperiment
 This repository contains data and the code used to create and analyze data for the manuscript: 
 
-"Exploration and Exploitation in Dynamic Cooperative Multiplex Networks"
+Daniel J. Simmons, Keith Burghardt, Luba Levin-Banchik, Michelle C. Phillips, and Zeev Maoz. "Exploration and Exploitation in Dynamic Cooperative Multiplex Networks" (in submission) (2018)
 
-By Daniel J. Simmons, Keith Burghardt, Luba Levin-Banchik, Michelle C. Phillips, and Zeev Maoz
+Analysis code by Keith Burghardt and z-Tree code is by Daniel J. Simmons, Keith Burghardt, and Michelle C. Phillips
 
-- Analysis code by Keith Burghardt (Copyright 2018)
-
-- z-Tree code by Daniel J. Simmons, Keith Burghardt, and Michelle C. Phillips (Copyright 2018)
-
-- The repository is split into 4 parts: experiment code, simulations, data analysis, and data/protocol
+The repository is split into 4 parts: experiment code, simulations, data analysis, and data/protocol
  - Experiment code is the z-Tree code we run, which is based on code from the paper: Martijn J Burger and Vincent Buskens. "Social context and network formation: An experimental study" Social Networks 31(1):63–75 (2009)
  - Simulations are Java code based on code by Paul Smaldino here: https://www.comses.net/codebases/5148/releases/1.0.0/. Description of simulation algorithm is in our forthcoming paper.
  - Data analysis is python code that reads in the raw output of the simulation and experiment data and spits out a user-friendly .csv file
