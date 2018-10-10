@@ -1,6 +1,6 @@
 
 ## Files
-- Protcol states the procedure to run our experiment and output variables seen in the Z-Tree code
+- SPINS Experimental Procedure.pdf states the procedure to run our experiment and output variables seen in the Z-Tree code
 - ParseExperimentData.csv is the output file (all experiment data we use in our paper)
 
 ## Codebook for parsed data:
