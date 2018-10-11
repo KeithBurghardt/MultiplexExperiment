@@ -55,7 +55,7 @@ for line in csv_reader:
             # fraction spillover
             mat1mat2 = np.multiply(mat1,mat2);
             spillover = np.sum(mat1mat2,axis=0);
-            fs = np.divide(spillover,ties);
+            fs = np.multiply(2,np.divide(spillover,ties));
             fs = np.ndarray.tolist(fs);
             fract_spillover.append(fs);
             
