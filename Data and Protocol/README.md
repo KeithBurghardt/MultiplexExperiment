@@ -54,9 +54,9 @@ All data is recorded by period (a period is defined as a single player's turn), 
 
 - FractionSpillover: Fraction spillover of a node in a layer (if degree is 0, this value is undefined)
 
-- gender: subject's gender (if stated)
+- gender: Subject's gender (if stated)
 
-- year: what year, e.g., freshman in college (if stated)
+- year: What year, e.g., freshman in college (if stated). These are words copied from the raw data, but we clean it for analysis by putting. e.g., "Fresh", "fresh", "freshman", etc., into 1 category.
 
-- major: what major if they are in college
+- major: What major if they are in college. These are words copied from the raw data, but we clean it for analysis by putting. e.g., "Bio", "bio", "Biology", etc., into 1 category. Some subjects have 2 majors, but these are rare.
 
