@@ -8,7 +8,7 @@ For our manuscript we use python code seen in the DataAnalysis section to record
 - Number of Ties: node degree in one layer plus the node degree in the other
 - Mean Clustering Coefficient: local clustering coefficient average over both layers. If a node has degree 0 or 1 in one layer, then clustering coefficient is defined as 0 in that layer.
 - Fraction Spillover: 2*(number of ties that connect to the same nodes in both layers)/(number of ties). If the number of ties is 0, then this statistic is undefined and we therefore ignore this datapoint (this is rarely an issue in empirical data).
-- Profit: Amount of utility subjects gain at the end of the period. This is simply the points gained and not the money they receieve.
+- Profit: Amount of utility points subjects gain at the end of the period. This is simply the points gained and not the money they receieve.
 
 All data is recorded by period (a period is defined as a single player's turn), but in the manuscript we plot data by round, where a round is defined as the end of the 6th period, when everyone will have played once. N.B., cumulative utility per person (used to calculate payoff at the end of the experiment) is calculated by summing up utility points collected each period even when it is not their turn (i.e., even if they are not the "active player", 72 periods total). Utility per round shown in the manuscript is only used in the plot to give a sense of utility once every player had a turn to play.
 
