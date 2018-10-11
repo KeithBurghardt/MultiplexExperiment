@@ -3,6 +3,15 @@
 - SPINS Experimental Procedure.pdf states the procedure to run our experiment and output variables seen in the Z-Tree code
 - ParseExperimentData.csv is the output file (all experiment data we use in our paper)
 
+## Statistics
+For our manuscript we use python code seen in the DataAnalysis section to record the following statistics:
+- Number of Ties: node degree in one layer plus the node degree in the other
+- Mean Clustering Coefficient: local clustering coefficient average over both layers. If a node has degree 0 or 1 in one layer, then clustering coefficient is defined as 0 in that layer.
+- Fraction Spillover: 2*(number of ties that connect to the same nodes in both layers)/(number of ties). If the number of ties is 0, then this statistic is undefined and we therefore ignore this datapoint (this is rarely an issue in empirical data).
+- Utility: Amount of utility subjects gain at the end of the period.
+
+All data is recorded by period (a period is defined as a single player's turn), but in the manuscript we plot data by round, where a round is defined as the end of the 6th period, when everyone will have played once.
+
 ## Codebook for parsed data:
 
 - ExperimentNumber: An ordinal number unique to each experiment
