@@ -8,7 +8,7 @@ For our manuscript we use python code seen in the DataAnalysis section to record
 - Number of Ties: node degree in one layer plus the node degree in the other
 - Mean Clustering Coefficient: local clustering coefficient average over both layers. If a node has degree 0 or 1 in one layer, then clustering coefficient is defined as 0 in that layer.
 - Fraction Spillover: 2*(number of ties that connect to the same nodes in both layers)/(number of ties). If the number of ties is 0, then this statistic is undefined and we therefore ignore this datapoint (this is rarely an issue in empirical data).
-- Utility: Amount of utility subjects gain at the end of the period.
+- Profit: Amount of utility subjects gain at the end of the period. This is simply the points gained and not the money they receieve.
 
 All data is recorded by period (a period is defined as a single player's turn), but in the manuscript we plot data by round, where a round is defined as the end of the 6th period, when everyone will have played once.
 
@@ -47,6 +47,12 @@ All data is recorded by period (a period is defined as a single player's turn), 
 - Profit: Current profit per period
 
 - PlayerConnectedToLayer-[layer]_Node[i]: The layer and neighboring node a PlayerName connects to (1 if there is a connection or 0 otherwise)
+
+- DegreeLayer[layer]: Degree of node in a layer
+
+- ClusteringCoefficientLayer[layer]: Clustering coefficient of a node in a layer (if degree is 0 or 1, this value is 0)
+
+- FractionSpillover: Fraction spillover of a node in a layer (if degree is 0, this value is undefined)
 
 - gender: subject's gender (if stated)
 
