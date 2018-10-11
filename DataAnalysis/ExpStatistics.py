@@ -62,12 +62,14 @@ for line in csv_reader:
             # clustering coefficient
             mat13 = np.matmul(mat1,np.matmul(mat1,mat1));
             num_tri1 = mat13.diagonal();
-            clust1 = np.divide(num_tri1,np.sum(mat1,axis=0));
+            d1 = np.sum(mat1,axis=0);
+            clust1 = np.divide(num_tri1,np.multiply(d1,(d1-1)));
             where_are_NaNs = isnan(clust1);
             clust1[where_are_NaNs] = 0;
             mat23 = np.matmul(mat2,np.matmul(mat2,mat2));
             num_tri2 = mat23.diagonal();
-            clust2 = np.divide(num_tri2,np.sum(mat2,axis=0));
+            d2 = np.sum(mat2,axis=0);
+            clust2 = np.divide(num_tri2,np.multiply(d2,(d2-1)));
             where_are_NaNs = isnan(clust2);
             clust2[where_are_NaNs] = 0;
             
@@ -88,7 +90,7 @@ for line in csv_reader:
 # we now have an array of 
 r.close();
 
-header = exp_stats_header + ["shocked","profit","DegreeLayer1","DegreeLayer1","ClusteringCoefficientLayer1","ClusteringCoefficientLayer2","FractionSpillover","gender","year","major"]
+header = exp_stats_header + ["shocked","profit","DegreeLayer1","DegreeLayer2","ClusteringCoefficientLayer1","ClusteringCoefficientLayer2","FractionSpillover","gender","year","major"]
     
 #fract_spillover = np.ndarray.tolist(fract_spillover);
 fract_spillover = flatten(fract_spillover);
