@@ -2,6 +2,7 @@
 ## Files
 - SPINS Experimental Procedure.pdf states the procedure to run our experiment and output variables seen in the Z-Tree code
 - ParseExperimentData.csv is the output file (all experiment data we use in our paper)
+- ParseExperimentData_Stats.csv is an output file of all statistics we use in the experiment, based on ParseExperimentData.csv
 
 ## Statistics
 For our manuscript we use python code seen in the DataAnalysis section to record the following statistics:
