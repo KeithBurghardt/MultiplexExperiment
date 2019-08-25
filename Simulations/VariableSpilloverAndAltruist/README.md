@@ -1,6 +1,8 @@
 ## Multiplex Variable Spillover And Altruist Code
 
-This is code to analyze how the experiment multiplex networks evolve after shocks. 
+This is code to analyze how the experiment multiplex networks evolve when one layer is shocked or one node is an altruist.
+
+Paper is in submission.
 
 We want to especially thank Paul Smaldino for creating the initial code we base our simulations on. Code is from paper: Smaldino PE, D’Souza R, Maoz Z Resilience by structural entrenchment: Dynamics of single-layer and multiplex networks following sudden changes to tie costs. Network Science: 1-19. doi:10.1017/nws.2017.35 (2017).
 
